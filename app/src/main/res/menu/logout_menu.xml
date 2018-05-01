@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/sqlite"
+        android:title="Sqlite"
+        app:showAsAction="always" />
+</menu>

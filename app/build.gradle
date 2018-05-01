@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "com.couchbase.todocblviewer"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    // workaround for "duplicate files during packaging of APK" issue:
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.3'
+
+
+    // Support libraries
+    implementation deps.support.app_compat
+    implementation deps.support.v4
+    implementation deps.support.design
+    implementation deps.support.cardview
+
+    // Constraints
+    implementation deps.constraint_layout
+
+    // Couchbase lite android
+    implementation deps.couchbase_lite_android
+    implementation deps.facebook_stetho
+    implementation deps.couchbase_stetho
+
+    // Architecture components
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+    androidTestImplementation deps.room.testing
+    androidTestImplementation deps.arch_core.testing
+
+    // Espresso UI Testing
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    // Resolve conflicts between main and test APK:
+    androidTestImplementation deps.support.annotations
+    androidTestImplementation deps.support.v4
+    androidTestImplementation deps.support.app_compat
+    androidTestImplementation deps.support.design
+
+    // android support libraries
+//    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+//    implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+//    implementation "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
+
+
+//    testImplementation "junit:junit:$rootProject.junitVersion"
+
+//    implementation project(':couchbase-lite-android-console')
+//    implementation project(':couchbase-lite-android-viewer')
+//    implementation deps.table_view
+//    implementation 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.0'
+    implementation deps.table_view
+    implementation 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1'
+    implementation 'com.pkj.wow.paginationview:PaginationView:1.0.2'
+}
