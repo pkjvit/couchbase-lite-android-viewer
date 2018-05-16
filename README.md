@@ -2,6 +2,15 @@
 
 **Couchbase Lite Android Viewer** is a sdk tool provide for Couchbase Lite Android 1.4 Applications to view all databases and query on them using smart query templates.
 
+## Functionality
+- Show all couchbase databases
+- Show all tables of selected database
+- Gives a console where you can query on selected table
+- Provide *Smart Query Templates* which gives you predefined queries on the fly
+- Shows queried data in a page of size 50 rows, for large data you can go particular page on the go using bottom ![Pagination view](https://github.com/pkjvit/PaginationView)
+
+![CbliteViewer](https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_250x.gif)
+
 ## Requirements
 
 - Android 4.1+
@@ -12,7 +21,7 @@
 Add the following in the dependencies section of the application's build.gradle (the one in the app folder).
 
 ```
-    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1'
+    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1-3'
     
     // dependencies
     compile 'com.pkj.wow.paginationview:PaginationView:1.0.2'
