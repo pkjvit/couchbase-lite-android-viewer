@@ -21,10 +21,10 @@
 Add the following in the dependencies section of the application's build.gradle (the one in the app folder).
 
 ```
-    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1-3'
+    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1-5'
     
     // dependencies
-    compile 'com.pkj.wow.paginationview:PaginationView:1.0.2'
+    compile 'com.pkj.wow.paginationview:PaginationView:1.0.2-5'
     compile 'de.codecrafters.tableview:tableview:2.8.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 ```
