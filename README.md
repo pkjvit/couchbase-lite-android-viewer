@@ -20,7 +20,7 @@
 <img src="https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_03.png" width="200">
 </div>
 
-
+## Preview
 ![CbliteViewer](https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_250x.gif)
 
 ## Requirements
