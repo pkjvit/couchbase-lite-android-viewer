@@ -9,7 +9,6 @@
 - Provide *Smart Query Templates* which gives you predefined queries on the fly
 - Shows queried data in a page of default size 50 rows(can be change from pagination tool), for large data you can go particular page on the go using bottom [Pagination view](https://pkjvit.github.io/PaginationView/)
 
-![CbliteViewer](https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_250x.gif)
 
 ## Screen Shots
 
@@ -20,6 +19,9 @@
 <img width="20">
 <img src="https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_03.png" width="200">
 </div>
+
+
+![CbliteViewer](https://github.com/pkjvit/couchbase-lite-android-viewer/blob/master/screenshots/cblite_viewer_250x.gif)
 
 ## Requirements
 
