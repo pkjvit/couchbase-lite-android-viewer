@@ -33,7 +33,7 @@
 Add the following in the dependencies section of the application's build.gradle (the one in the app folder).
 
 ```
-    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1-9'
+    compile 'com.pkj.wow.cblite.viewer:couchbase-lite-android-viewer:0.1.1-11'
     
     // dependencies
     compile 'com.pkj.wow.paginationview:PaginationView:1.0.2-7'
