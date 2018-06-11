@@ -171,7 +171,7 @@ public class ListsActivity extends AppCompatActivity {
                 return true;*/
 
             case R.id.sqlite:
-                CbLiteViewer cbLiteViewer = CbLiteViewer.instance(this, application.getManager());
+                CbLiteViewer cbLiteViewer = CbLiteViewer.instance(this);
                 cbLiteViewer.start();
 //                SqliteViewerConsole sqliteViewer = SqliteViewerConsole.instance(application.getManager());
 //                sqliteViewer.start(this);
